@@ -1,0 +1,15 @@
+﻿@page
+@model webapp.Pages.OpenInfoModel
+@{
+}
+
+<div class="container-fluid">
+    
+    <p>
+        @DateTime.Now.ToString("dd-MMMM yyyy, hh:mm:ss tt")
+    </p>
+    @if(User.Identity.IsAuthenticated)
+    {
+        <h1>This is a authenticated user @User.Identity.Name</h1>
+    }
+</div>
